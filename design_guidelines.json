@@ -1,0 +1,159 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Creative Designer",
+    "mission": "Create a bilingual, culturally resonant public safety platform for Braj Holi that balances festival vibrancy with emergency utility."
+  },
+  "project_name": "AUMRYX CrowdSafe",
+  "design_system": {
+    "theme_strategy": "Saffron Safety (Light Mode Focus)",
+    "colors": {
+      "primary": {
+        "name": "Braj Saffron",
+        "hex": "#FF9933",
+        "usage": "Primary buttons, active states, key highlights"
+      },
+      "secondary": {
+        "name": "Marigold Yellow",
+        "hex": "#FFB700",
+        "usage": "Secondary highlights, decorative elements, 'Moderate' crowd status"
+      },
+      "background": {
+        "name": "Vrindavan Cream",
+        "hex": "#FFFBF0",
+        "usage": "Main background - avoids stark white for a warmer, traditional feel"
+      },
+      "surface": {
+        "name": "Temple Stone",
+        "hex": "#FFFFFF",
+        "usage": "Cards, modals, map overlays"
+      },
+      "text": {
+        "primary": "#1F2937",
+        "secondary": "#4B5563",
+        "muted": "#9CA3AF"
+      },
+      "status": {
+        "danger": "#DC2626",
+        "success": "#16A34A",
+        "warning": "#F59E0B",
+        "info": "#2563EB"
+      }
+    },
+    "typography": {
+      "headings": {
+        "font_family": "Rozha One, serif",
+        "usage": "Page titles, Hero text, Section headers. Supports Devanagari & Latin with high contrast.",
+        "weights": ["400"]
+      },
+      "body": {
+        "font_family": "Outfit, sans-serif",
+        "usage": "UI text, buttons, descriptions. Clean and legible.",
+        "weights": ["300", "400", "500", "600", "700"]
+      },
+      "hindi_fallback": {
+        "font_family": "Rozha One (Headings), Noto Sans Devanagari (Body)",
+        "usage": "Ensure Hindi text is legible and properly aligned."
+      }
+    },
+    "spacing": {
+      "base_scale": "Tailwind default",
+      "container_padding": "p-4 md:p-8 lg:p-12",
+      "section_gap": "gap-8 md:gap-16"
+    },
+    "radius": {
+      "default": "rounded-xl",
+      "buttons": "rounded-full",
+      "cards": "rounded-2xl"
+    },
+    "shadows": {
+      "card": "shadow-[0_4px_20px_-2px_rgba(0,0,0,0.1)]",
+      "floating": "shadow-[0_8px_30px_rgba(0,0,0,0.12)]",
+      "glow": "shadow-[0_0_15px_rgba(255,153,51,0.3)]"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_crowd": {
+        "url": "https://images.unsplash.com/photo-1616787671803-e660b92c0d25",
+        "alt": "Holi crowd in Mathura",
+        "usage": "Hero section background or main visual"
+      },
+      "temple_landmark": {
+        "url": "https://images.unsplash.com/photo-1697982837148-25977e5f18bf",
+        "alt": "Madan Mohan Temple Vrindavan",
+        "usage": "Visitor guide, cultural context cards"
+      },
+      "festival_vibe": {
+        "url": "https://images.unsplash.com/photo-1635247054850-88c9b1dab986",
+        "alt": "Boy with Holi colors",
+        "usage": "Emotional connection, safety guidelines header"
+      },
+      "safety_placeholder": {
+        "url": "https://images.unsplash.com/photo-1739461225193-1933dc4390eb",
+        "alt": "Security personnel",
+        "usage": "Official alerts or help section (use discreetly)"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px or 2px for clarity",
+      "custom_needs": "Use 'Siren' for SOS, 'MapPin' for location, 'Users' for crowd"
+    }
+  },
+  "components": {
+    "SOSButton": {
+      "specs": "Fixed bottom-center (mobile) or bottom-right (desktop). Color: #DC2626. Shape: Circular (64px). Animation: Pulse effect.",
+      "interaction": "Press and hold (2s) to activate to prevent accidental triggers.",
+      "label": "SOS / मदद"
+    },
+    "LiveStatusTicker": {
+      "specs": "Top of page. Marquee or static banner. Color: Dynamic based on status (Green/Red).",
+      "content": "Live crowd density updates for key locations (Banke Bihari, Prem Mandir, etc.)"
+    },
+    "LanguageToggle": {
+      "specs": "Prominent switch in Navbar. Options: EN | HI. Must change entire UI language instantly."
+    },
+    "CrowdCard": {
+      "specs": "Card showing location name, current crowd level (Low/Med/High), and last updated time.",
+      "visuals": "Use color-coded bars or icons for crowd density."
+    }
+  },
+  "pages": {
+    "home": {
+      "layout": "Control Room Lite. Hero with Map Preview + Status Ticker. Grid of quick actions (Schedule, Routes, Lost & Found).",
+      "focus": "Immediate situational awareness."
+    },
+    "map": {
+      "layout": "Full screen Leaflet/OSM. Floating search bar. Bottom sheet for location details.",
+      "features": "Layers for: Water, Police, Medical, Toilets, Parking."
+    },
+    "schedule": {
+      "layout": "Vertical Timeline. Date on left, Event details on right. Highlight 'Today's Events'.",
+      "style": "Clean, readable, high contrast."
+    },
+    "emergency": {
+      "layout": "High contrast, minimal distractions. Big buttons for Police, Ambulance, Fire. 'Share Location' prominent.",
+      "theme": "Red/White warning theme."
+    }
+  },
+  "universal_guidelines": {
+    "general": [
+      "Do not use gradients for text.",
+      "Ensure 4.5:1 contrast ratio for all text.",
+      "Mobile-first approach is mandatory.",
+      "All interactive elements must have hover/active states.",
+      "Use 'sonner' for toast notifications.",
+      "Use 'lucide-react' for icons."
+    ],
+    "accessibility": [
+      "Support dynamic text sizing.",
+      "All images must have alt text.",
+      "Focus states must be clearly visible (ring-2 ring-offset-2)."
+    ],
+    "testing": [
+      "All interactive elements must include data-testid attributes."
+    ]
+  },
+  "instructions_to_main_agent": "Implement the design using the specified colors and fonts. Prioritize the 'Saffron Safety' theme. Ensure the SOS button is always accessible. Use the provided image URLs for the respective sections. Build the map using 'react-leaflet' or similar OSM wrapper. Ensure bilingual support structure is in place (even if hardcoded for MVP)."
+}

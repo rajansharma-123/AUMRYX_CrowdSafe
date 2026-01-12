@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 100% 97%;
+    --foreground: 220 14% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 14%;
+    --primary: 28 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 100% 50%;
+    --secondary-foreground: 220 14% 14%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 28 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 28 30% 85%;
+    --input: 28 30% 85%;
+    --ring: 28 100% 60%;
+    --chart-1: 28 100% 60%;
+    --chart-2: 43 100% 50%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 0 72% 51%;
+    --chart-5: 217 91% 60%;
+    --radius: 0.75rem;
+    
+    /* Custom colors */
+    --saffron: #FF9933;
+    --marigold: #FFB700;
+    --cream: #FFFBF0;
+    --temple-stone: #FFFFFF;
+    --danger: #DC2626;
+    --success: #16A34A;
+    --warning: #F59E0B;
+    --info: #2563EB;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#FFFBF0] text-foreground;
+    font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rozha One', serif;
+  }
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFBF0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF9933;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e68a2e;
+}
+
+/* SOS Button pulse animation */
+@keyframes sos-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
+  }
+}
+
+.sos-pulse {
+  animation: sos-pulse 2s infinite;
+}
+
+/* Status indicator pulse */
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.status-pulse {
+  animation: status-pulse 2s infinite;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF9933, #FFB700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Safe routes styling */
+.route-safe {
+  border-left: 4px solid #16A34A;
+}
+
+.route-caution {
+  border-left: 4px solid #F59E0B;
+}
+
+.route-avoid {
+  border-left: 4px solid #DC2626;
+}
+
+/* Timeline styling */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #FF9933;
+}
+
+/* Crowd level badges */
+.crowd-low {
+  background-color: #16A34A;
+  color: white;
+}
+
+.crowd-moderate {
+  background-color: #F59E0B;
+  color: white;
+}
+
+.crowd-high {
+  background-color: #DC2626;
+  color: white;
+}
+
+.crowd-extreme {
+  background-color: #7C2D12;
+  color: white;
+}
+
+/* Mobile bottom nav */
+.bottom-nav {
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+
+/* Language toggle */
+.lang-active {
+  background: #FF9933;
+  color: white;
+}
+
+.lang-inactive {
+  background: transparent;
+  color: #4B5563;
+}
+
+/* Emergency button styles */
+.emergency-btn {
+  transition: transform 0.1s ease;
+}
+
+.emergency-btn:active {
+  transform: scale(0.95);
+}
+
+@layer base {
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+}

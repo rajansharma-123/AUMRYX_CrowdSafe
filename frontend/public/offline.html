@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - AUMRYX CrowdSafe</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FFFBF0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .icon { font-size: 64px; margin-bottom: 20px; }
+    h1 { color: #1F2937; font-size: 24px; margin-bottom: 10px; }
+    p { color: #4B5563; margin-bottom: 20px; }
+    .emergency-box {
+      background: #DC2626;
+      color: white;
+      padding: 20px;
+      border-radius: 16px;
+      margin-top: 20px;
+      max-width: 300px;
+    }
+    .emergency-box h2 { font-size: 18px; margin-bottom: 10px; }
+    .emergency-box a {
+      display: block;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px;
+      margin: 5px 0;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+    }
+    .retry-btn {
+      background: #FF9933;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon">📶</div>
+  <h1>You're Offline</h1>
+  <p>No internet connection. Some features may be limited.</p>
+  
+  <button class="retry-btn" onclick="location.reload()">Try Again</button>
+  
+  <div class="emergency-box">
+    <h2>🚨 Emergency Numbers</h2>
+    <a href="tel:100">Police: 100</a>
+    <a href="tel:102">Ambulance: 102</a>
+    <a href="tel:101">Fire: 101</a>
+    <a href="tel:112">Emergency: 112</a>
+  </div>
+  
+  <script>
+    // Check for online status
+    window.addEventListener('online', () => location.reload());
+  </script>
+</body>
+</html>
