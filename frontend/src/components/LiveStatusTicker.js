@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API } from '../lib/api';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Users, RefreshCw } from 'lucide-react';
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const LiveStatusTicker = () => {
   const { t, language } = useLanguage();

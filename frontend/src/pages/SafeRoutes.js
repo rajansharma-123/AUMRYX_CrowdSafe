@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API } from '../lib/api';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -13,8 +14,6 @@ import {
   ArrowRight,
   RefreshCw
 } from 'lucide-react';
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const SafeRoutes = () => {
   const { t, language } = useLanguage();

@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import Dict, List, Tuple
 
 class CrowdSafeAPITester:
-    def __init__(self, base_url="https://brajholisafety.preview.emergentagent.com"):
+    def __init__(self, base_url="https://brajholisafety.preview.example.com"):
         self.base_url = base_url
         self.api_url = f"{base_url}/api"
         self.session_token = None

@@ -3,8 +3,7 @@ import axios from 'axios';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent } from '../components/ui/card';
 import { Bell, AlertTriangle, Info, Clock } from 'lucide-react';
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+import { API } from '../lib/api';
 
 const Alerts = () => {
   const { t, language } = useLanguage();

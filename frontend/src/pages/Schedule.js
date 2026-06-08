@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API } from '../lib/api';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import StatusBadge from '../components/StatusBadge';
 import { Calendar, MapPin, Clock, AlertTriangle, Bookmark, BookmarkCheck } from 'lucide-react';
 import { toast } from 'sonner';
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const getDeviceId = () => {
   let deviceId = localStorage.getItem('crowdsafe_device_id');

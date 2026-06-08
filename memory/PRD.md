@@ -29,7 +29,7 @@
 - **Frontend:** React 19, Tailwind CSS, Shadcn/UI, Leaflet/OpenStreetMap
 - **Backend:** FastAPI (Python)
 - **Database:** MongoDB
-- **Auth:** Emergent Google OAuth (admin only)
+- **Auth:** Google OAuth (admin only)
 - **PWA:** Service Worker with offline caching
 
 ## What's Been Implemented (January 2026)
@@ -72,7 +72,7 @@
 - Event Bookmarks CRUD (/api/bookmarks)
 - Real-time Status (/api/realtime/status)
 - Push Subscriptions (/api/push/*)
-- Auth (Emergent Google OAuth)
+- Auth (Google OAuth)
 
 ### Seeded Data
 - 9 Braj Holi 2026 events (Lathmar Holi, Phoolon ki Holi, Huranga, etc.)

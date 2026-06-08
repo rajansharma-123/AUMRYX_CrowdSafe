@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API } from '../lib/api';
 import { useLanguage } from '../contexts/LanguageContext';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
@@ -8,8 +9,6 @@ import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import StatusBadge from '../components/StatusBadge';
 import { Users, RefreshCw, Layers, X } from 'lucide-react';
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 // Fix for default markers
 delete L.Icon.Default.prototype._getIconUrl;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import { API } from '../lib/api';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -14,8 +15,6 @@ import {
 } from '../components/ui/select';
 import { Search, Plus, Phone, MapPin, Clock, X, Camera, Image, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const LostFound = () => {
   const { t, language } = useLanguage();
